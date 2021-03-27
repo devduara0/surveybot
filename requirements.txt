@@ -1,0 +1,19 @@
+rasa[spacy]==1.10.8
+rasa-sdk~=1.10.0
+python-dateutil==2.8.1
+numpy~=1.18.3
+pytz~=2019.3
+ruamel.yaml
+pytablewriter
+black==19.10b0
+flake8==3.7.9
+pytype==2019.7.11
+pre-commit
+Django==3.0.10
+pillow==8.1.0
+pandas==1.1.5
+XlsxWriter==1.3.7
+xlrd==2.0.1
+openpyxl==3.0.5
+# https://github.com/hackstarsj/student_management_system_part_11
+# 

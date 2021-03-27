@@ -1,0 +1,108 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - inform
+  - survey_qb
+  - survey_qa
+
+
+entities:
+  - mkowa
+  - category
+  - maoni
+  - maks
+responses:
+  utter_greet:
+  - text: "Asante! sana kwa mchango wako\n ili kuonyesha kwamba tupo pamoja na tunauthamini\n mchango wako andika neno pamoja."
+
+  utter_goodbye:
+  - text: "Kwa heri. Bye!"
+
+  utter_ask_confirm_nchi:
+  - text: Unaishi nchi gani? 
+  utter_ask_mkowa:
+  - text: Aha, vizuri mkowa gani 💪 ?
+  utter_ask_maks:
+  - text: "Kati ya maks 10, 20 na 30 wewe tuvuti hi unaipa maks ngapi?\n Tafadhali chagua "
+    buttons:
+      - title: "10"
+        payload: '/inform{"maks": "10"}'
+      - title: "20"
+        payload: '/inform{"maks": "20"}'
+      - title: "30"
+        payload: '/inform{"maks": "30"}'
+  utter_ask_category:
+  - text: "ni machapisho ya jamii category gani ambayo wewe unayapendelea zaidi"
+    buttons:
+      - title: "mazao"
+        payload: '/inform{"category": "mazao"}'
+      - title: "pemejeo"
+        payload: '/inform{"category": "pemejeo"}'
+      - title: "mifugo"
+        payload: '/inform{"category": "mifugo"}'
+      - title: "madawa"
+        payload: '/inform{"category": "madawa"}'
+  utter_ask_feedback:
+    - text: "kati ya moja mpaka tano tuvuti hi kwa ujumla unaipa maks ngapi?\n tafathali weka maandishi" 
+  utter_slots_values:
+    - text: "Hizi ndizo tarifa ulizo jaza, tuta tumia tarifa hizi kuboresha hudumazetu kwako:\n ilikuzituma tarifa hizi tafadhali andika neno tuma:\n 
+             - Mkowa: {mkowa}\n
+             - maks:{maks}\n
+             - category: {category}\n
+             - maoni: {maoni}"
+                         
+  utter_ask_qb:
+   - text: "Pole, ni jambo gani ungependa tuliboreshe haraka iwezekanavyo?" 
+     buttons:
+      - title: "machapisho sijayapenda"
+        payload: '/inform{"maoni": "machapisho sijayapenda"}'
+      - title: "maoni yaliyoko kwenye machapisho sija yapenda"
+        payload: '/inform{"maoni": "maoni yaliyoko kwenye machapisho sija yapenda"}'
+      - title: "maoni, pamoja na machapisho sijayapenda"
+        payload: '/inform{"maoni, pamoja na machapisho sijayapenda"}'
+      - title: "muonekano wa webapp siyo mzuri"
+        payload: '/inform{"maoni": "muonekano wa webapp siyo mzuri"} ' 
+      - title: "webapp ni ngumu kutumia"
+        payload: '/inform{"maoni": "webapp ni ngumu kutumia"} '        
+  utter_ask_qa:
+  - text: "Asante, ni jambo gani linalo kuvutia zaidi?"
+    buttons:
+      - title: "nayapenda machapisho"
+        payload: '/inform{"maoni": "nayapenda machapisho"}'
+      - title: "napenda maoni yaliyoko kwenye machapisho"
+        payload: '/inform{"maoni": "napenda maoni yaliyoko kwenye machapisho"}'
+      - title: "napenda maoni, pamoja na machapisho"
+        payload: '/inform{"maoni": "napenda maoni, pamoja na machapisho"}'
+      - title: "muonekano wa webapp ni mzuri una vutia"
+        payload: '/inform{"maoni": "muonekano wa webapp ni mzuri una vutia"}'
+      - title: "webapp ni rahist kutumia"
+        payload: '/inform{"maoni": "webapp ni rahist kutumia"}'  
+      
+            
+slots:
+  confirm_nchi:
+    type: unfeaturized
+  mkowa:
+    type: unfeaturized
+  maks:
+    type: unfeaturized  
+  maoni:
+    type: unfeaturized    
+  category:
+    type: unfeaturized
+  feedback:
+    type: unfeaturized
+
+
+session_config:
+  session_expiration_time: 05
+  carry_over_slots_to_new_session: false
+
+forms:
+  - survey_form
+  
+actions:
+
+  - action_save_data  
