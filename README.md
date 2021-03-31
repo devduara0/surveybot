@@ -1,5 +1,5 @@
 # surveybot
-This is a simple Rasa bot that uses a form to create a daily log of how the user would rate a site. The full tutorial is available here note: the tutorial is in Swahili
+This is a simple Rasa bot that uses a form to create a daily log of how the user would rate a site. The full [tutorial is available here](https://devduara0.netlify.app/blog/jinsi-ya-kuinstall-na-kufanya-configuration-ya-chatbot-kwa-kutumia-python-pamoja-na-rasa)  note: the tutorial is in Swahili
 
 ## Running the assistant
 Install 
